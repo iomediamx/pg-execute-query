@@ -1,0 +1,24 @@
+language: node_js
+sudo: required
+node_js:
+  - "5"
+env:
+  global:
+    - PORT=5000
+    - DATABASE_URL=postgres://localhost/execute-query
+    - NODE_ENV=test
+    - PGPORT=5433
+    - PGHOST=localhost
+addons:
+  apt:
+    sources:
+      - precise-pgdg-9.5
+    packages:
+      - posgresql-9.5
+      - postgresql-contrib-9.5
+  postgresql: "9.5"
+services:
+  - postgresql
+before_script:
+  - sudo cp /etc/postgresql/9.4/main/pg_hba.conf /etc/postgresql/9.5/main/pg_hba.conf
+  - sudo /etc/init.d/postgresql restart
