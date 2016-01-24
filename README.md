@@ -1,5 +1,5 @@
 # pg-execute-query
-Async parameters binding and query execution using pg
+Async parameters binding and query execution using pg.
 
 [![Build Status](https://travis-ci.org/iomediamx/pg-execute-query.svg?branch=master)](https://travis-ci.org/iomediamx/pg-execute-query)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
