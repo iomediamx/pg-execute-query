@@ -24,6 +24,7 @@
     "pg": "^4.4.3"
   },
   "devDependencies": {
+    "jasmine": "^2.4.1",
     "jsdoc": "^3.4.0",
     "standard": "^5.4.1"
   },
