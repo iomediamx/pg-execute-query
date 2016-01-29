@@ -1,6 +1,6 @@
 {
   "name": "pg-execute-query",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "async parameters binding and query execution using pg",
   "main": "index.js",
   "repository": {

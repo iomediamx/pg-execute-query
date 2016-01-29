@@ -42,7 +42,8 @@ function callback (res) {
 ```javascript
 var execute = require('pg-execute-query')
 var connection = process.env.DATABASE_URL
-var queryString = 'select 1::int as num'
+var queryString = 'select $1::int as num'
+var queryParameters = ['1']
 execute.executeQuery(connection, queryString, queryParameters)
 // nothing
 ```
