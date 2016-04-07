@@ -9,9 +9,13 @@ describe('Datatabase', function () {
     var queryString = 'select $1::int as num'
     var queryParameters = ['1']
     execute.executeQuery(connection, queryString, queryParameters, callback)
-    function callback (res) {
-      con = res
-      done()
+    function callback (err, res) {
+      if (err) {
+        console.error(err)
+      } else {
+        con = res
+        done()
+      }
     }
   })
   it('test connection', function () {

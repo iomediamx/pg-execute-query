@@ -22,8 +22,12 @@ var connection = process.env.DATABASE_URL
 var queryString = 'select $1::int as num'
 var queryParameters = ['1']
 execute.executeQuery(connection, queryString, queryParameters, callback)
-function callback (res) {
-  console.log(res[0].num)
+function callback (err, res) {
+  if (err) {
+    console.error(err)
+  } else {
+    console.log(res[0].num)
+  }
   // 1
 }
 ```
@@ -34,8 +38,12 @@ var execute = require('pg-execute-query')
 var connection = process.env.DATABASE_URL
 var queryString = 'select 1::int as num'
 execute.executeQuery(connection, queryString, callback)
-function callback (res) {
-  console.log(res[0].num)
+function callback (err, res) {
+  if (err) {
+    console.error(err)
+  } else {
+    console.log(res[0].num)
+  }
   // 1
 }
 ```
