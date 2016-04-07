@@ -1,6 +1,6 @@
 {
   "name": "pg-execute-query",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "async parameters binding and query execution using pg",
   "main": "index.js",
   "repository": {
@@ -31,7 +31,8 @@
   "scripts": {
     "pretest": "dropdb execute-query --if-exists && createdb execute-query && standard",
     "test": "jasmine",
-    "prepublish": "jsdoc -c ./conf.json"
+    "prepublish": "jsdoc -c ./conf.json && git add . && git commit -m 'add doc'",
+    "postpublish": "git push origin master"
   },
   "license": "MIT",
   "standard": {
