@@ -31,7 +31,7 @@ exports.executeQuery = function (connection, queryString, queryParameters, callb
 function pgQuery (queryString, queryParameters, callback, error, client, done) {
   if (error) {
     console.error('error fetching client from pool', error)
-    callback(error, undefined)
+    callback(error)
   }
   var results = []
   var query = (typeof queryParameters !== 'undefined')
@@ -41,11 +41,11 @@ function pgQuery (queryString, queryParameters, callback, error, client, done) {
   })
   query.on('end', function () {
     done()
-    callback(undefined, results)
+    callback(null, results)
   })
   query.on('error', function (error) {
     done()
     console.error('error running query', error)
-    callback(error, undefined)
+    callback(error)
   })
 }
