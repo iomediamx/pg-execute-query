@@ -27,8 +27,8 @@ function callback (err, res) {
     console.error(err)
   } else {
     console.log(res[0].num)
+    // 1
   }
-  // 1
 }
 ```
 The queryParameters and the callback are optional
@@ -43,8 +43,8 @@ function callback (err, res) {
     console.error(err)
   } else {
     console.log(res[0].num)
+    // 1
   }
-  // 1
 }
 ```
 ```javascript
